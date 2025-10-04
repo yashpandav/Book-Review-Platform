@@ -76,8 +76,8 @@ The application features a clean, light-only theme with warm colors:
 
 1. **Clone and Navigate**
    ```bash
-   git clone <repository-url>
-   cd book-review-platform
+   git clone https://github.com/yashpandav/Book-Review-Platform.git
+   cd Book-Review-Platform
    ```
 
 2. **Install All Dependencies**
@@ -333,7 +333,6 @@ GET /api/reviews/user/:userId
 - ✅ **Charts**: Rating distribution visualization using Recharts
 - ✅ **Enhanced UI**: Clean, beginner-friendly design with Poppins font
 - ✅ **API Documentation**: Complete Postman collection included
-- ✅ **Deployment Guide**: Comprehensive deployment instructions
 
 ## 📊 **Database Schema Design**
 
@@ -434,28 +433,6 @@ book-review-platform/
 ├── package.json                      # Root package.json for scripts
 └── README.md                         # Project documentation
 ```
-
-## 🎯 Features Implemented
-
-### **Core Features**
-- ✅ User authentication (register, login, JWT)
-- ✅ Book CRUD operations with ownership validation
-- ✅ Review system with 1-5 star ratings
-- ✅ Search and filter functionality (title, author, genre)
-- ✅ Pagination (5 books per page)
-- ✅ Dynamic average rating calculation
-- ✅ Protected routes and middleware
-
-### **Enhanced Features**
-- ✅ Rating distribution charts (Recharts)
-- ✅ User profile page with books and reviews
-- ✅ Modern Scholar Light theme (light-only)
-- ✅ Responsive design with Tailwind CSS
-- ✅ Simple navbar animation (slide-down effect)
-- ✅ Clean validation and comprehensive error handling
-- ✅ Sort functionality (date, title, author, year, rating)
-- ✅ API documentation with Postman collection
-- ✅ Beginner-friendly code structure
 
 ## 🏆 **Completion Status**
 
