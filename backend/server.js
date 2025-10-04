@@ -10,8 +10,17 @@ const reviewRoutes = require('./routes/reviews');
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: process.env.NODE_ENV === 'production' 
+    ? process.env.FRONTEND_URL 
+    : 'http://localhost:3000',
+  credentials: true
+}));
 app.use(express.json());
+
+app.get('/health', (req, res) => {
+  res.status(200).json({ status: 'OK', message: 'Server is running' });
+});
 
 // Routes
 app.use('/api/auth', authRoutes);
