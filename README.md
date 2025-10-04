@@ -2,6 +2,10 @@
 
 A beginner-friendly MERN (MongoDB, Express.js, React.js, Node.js) Book Review Platform where users can sign up, log in, add books, and review books. This project demonstrates clean, readable code perfect for learning full-stack development.
 
+### Access Here
+- **Frontend** - [Click Here](https://book-review-platform-sigma.vercel.app/)
+- **Backend** - [Click Here](https://book-review-platform-o6bf.onrender.com/health)
+
 ## 🎨 Theme - Modern Scholar Light
 
 The application features a clean, light-only theme with warm colors:
@@ -333,6 +337,10 @@ GET /api/reviews/user/:userId
 - ✅ **Charts**: Rating distribution visualization using Recharts
 - ✅ **Enhanced UI**: Clean, beginner-friendly design with Poppins font
 - ✅ **API Documentation**: Complete Postman collection included
+- ✅ Deployment: Backend deployed on Render, Frontend deployed on Vercel with live URLs:
+   - **Frontend** - [Click Here](https://book-review-platform-sigma.vercel.app/)
+   - **Backend** - [Click Here](https://book-review-platform-o6bf.onrender.com/health)
+
 
 ## 📊 **Database Schema Design**
 
