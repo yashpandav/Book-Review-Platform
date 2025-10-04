@@ -1,7 +1,7 @@
 import React from 'react';
+import { FaBook } from 'react-icons/fa';
 
 const LoadingSpinner = ({ size = 'md', text = 'Loading...' }) => {
-  // Size classes for different spinner sizes
   const sizeClasses = {
     sm: 'h-6 w-6',
     md: 'h-12 w-12',
@@ -16,9 +16,9 @@ const LoadingSpinner = ({ size = 'md', text = 'Loading...' }) => {
           <div className="absolute inset-0 border-4 border-teal rounded-full border-t-transparent animate-spin"></div>
         </div>
         
-        {/* Book emoji in center */}
+        {/* Book icon in center */}
         <div className="absolute inset-0 flex items-center justify-center">
-          <div className="text-teal">📚</div>
+          <FaBook className="text-teal" />
         </div>
       </div>
       

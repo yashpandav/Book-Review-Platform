@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 import BookCard from '../components/BookCard';
 import SearchFilter from '../components/SearchFilter';
 import Pagination from '../components/Pagination';
+import { FaBook } from 'react-icons/fa';
 
 const Home = () => {
   // State variables
@@ -127,7 +128,9 @@ const Home = () => {
         </>
       ) : (
         <div className="text-center py-12 card">
-          <div className="text-6xl mb-4">📚</div>
+          <div className="text-6xl mb-4 flex justify-center">
+            <FaBook className="text-gray-400" />
+          </div>
           <h3 className="text-xl font-semibold text-text-dark mb-2">
             No books found
           </h3>

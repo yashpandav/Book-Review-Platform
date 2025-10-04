@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { FaSearch } from 'react-icons/fa';
 
 const SearchFilter = ({ onSearch, onFilter, onSort }) => {
   // State for form inputs
@@ -35,8 +36,8 @@ const SearchFilter = ({ onSearch, onFilter, onSort }) => {
 
   return (
     <div className="card p-6 mb-8">
-      <h2 className="text-xl font-semibold text-text-dark mb-4">
-        🔍 Search & Filter Books
+      <h2 className="text-xl font-semibold text-text-dark mb-4 flex items-center gap-2">
+        <FaSearch /> Search & Filter Books
       </h2>
 
       {/* Search Bar */}

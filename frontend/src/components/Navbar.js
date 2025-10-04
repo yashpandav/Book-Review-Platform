@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
+import { FaBook } from 'react-icons/fa';
 
 const Navbar = () => {
   const { user, logout } = useAuth();
@@ -20,8 +21,8 @@ const Navbar = () => {
         <div className="flex justify-between items-center py-4">
           
           {/* Logo */}
-          <Link to="/" className="text-2xl font-bold text-white">
-            📚 Modern Scholar
+          <Link to="/" className="text-2xl font-bold text-white flex items-center gap-2">
+            <FaBook /> Modern Scholar
           </Link>
 
           {/* Desktop Menu */}

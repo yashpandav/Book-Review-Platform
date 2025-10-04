@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import ReviewForm from './ReviewForm';
+import { FaEdit } from 'react-icons/fa';
 
 const ReviewList = ({ reviews, currentUserId, onReviewUpdated }) => {
   const [editingReview, setEditingReview] = useState(null);
@@ -50,7 +51,9 @@ const ReviewList = ({ reviews, currentUserId, onReviewUpdated }) => {
   if (reviews.length === 0) {
     return (
       <div className="text-center py-8 card">
-        <div className="text-4xl mb-4">📝</div>
+        <div className="text-4xl mb-4 flex justify-center">
+          <FaEdit className="text-gray-400" />
+        </div>
         <h4 className="text-lg font-semibold text-text-dark mb-2">
           No reviews yet
         </h4>

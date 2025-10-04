@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { useAuth } from '../context/AuthContext';
+import { FaUser, FaBook, FaEdit } from 'react-icons/fa';
 
 const Profile = () => {
   const { user } = useAuth();
@@ -105,7 +106,9 @@ const Profile = () => {
           </div>
           
           {/* Profile Icon */}
-          <div className="text-6xl bg-cream-dark rounded-full p-4">👤</div>
+          <div className="text-6xl bg-cream-dark rounded-full p-4 flex items-center justify-center">
+            <FaUser className="text-gray-600" />
+          </div>
         </div>
       </div>
 
@@ -187,7 +190,9 @@ const Profile = () => {
                 </div>
               ) : (
                 <div className="text-center py-12">
-                  <div className="text-4xl mb-4">📚</div>
+                  <div className="text-4xl mb-4 flex justify-center">
+                    <FaBook className="text-gray-400" />
+                  </div>
                   <h3 className="text-lg font-semibold text-text-dark mb-2">
                     No books added yet
                   </h3>
@@ -240,7 +245,9 @@ const Profile = () => {
                 </div>
               ) : (
                 <div className="text-center py-12">
-                  <div className="text-4xl mb-4">📝</div>
+                  <div className="text-4xl mb-4 flex justify-center">
+                    <FaEdit className="text-gray-400" />
+                  </div>
                   <h3 className="text-lg font-semibold text-text-dark mb-2">
                     No reviews written yet
                   </h3>
