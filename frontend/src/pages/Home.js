@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import axios from 'axios';
+import api from '../config/api';
 import { toast } from 'react-toastify';
 import BookCard from '../components/BookCard';
 import SearchFilter from '../components/SearchFilter';
@@ -30,13 +30,16 @@ const Home = () => {
         ...filters
       };
 
-      const response = await axios.get('/api/books', { params });
-      setBooks(response.data.books);
-      setTotalPages(response.data.totalPages);
-      setTotalBooks(response.data.totalBooks);
+      const response = await api.get('/api/books', { params });
+      setBooks(response.data.books || []);
+      setTotalPages(response.data.totalPages || 1);
+      setTotalBooks(response.data.totalBooks || 0);
     } catch (error) {
       toast.error('Failed to fetch books');
       console.error('Error fetching books:', error);
+      setBooks([]);
+      setTotalPages(1);
+      setTotalBooks(0);
     } finally {
       setLoading(false);
     }

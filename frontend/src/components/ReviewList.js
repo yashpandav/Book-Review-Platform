@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import api from '../config/api';
 import ReviewForm from './ReviewForm';
 import { FaEdit } from 'react-icons/fa';
 
@@ -11,7 +11,7 @@ const ReviewList = ({ reviews, currentUserId, onReviewUpdated }) => {
   const handleDeleteReview = async (reviewId) => {
     if (window.confirm('Are you sure you want to delete this review?')) {
       try {
-        await axios.delete(`/api/reviews/${reviewId}`);
+        await api.delete(`/api/reviews/${reviewId}`);
         toast.success('Review deleted successfully');
         onReviewUpdated();
       } catch (error) {

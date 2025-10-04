@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import api from '../config/api';
 
 const ReviewForm = ({ bookId, onReviewSubmitted, existingReview = null }) => {
   // State for form data
@@ -26,11 +26,11 @@ const ReviewForm = ({ bookId, onReviewSubmitted, existingReview = null }) => {
     try {
       if (existingReview) {
         // Update existing review
-        await axios.put(`/api/reviews/${existingReview._id}`, formData);
+        await api.put(`/api/reviews/${existingReview._id}`, formData);
         toast.success('Review updated successfully!');
       } else {
         // Create new review
-        await axios.post('/api/reviews', {
+        await api.post('/api/reviews', {
           ...formData,
           bookId,
           rating: parseInt(formData.rating)

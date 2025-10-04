@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import api from '../config/api';
 
 const AddBook = () => {
   // State for form data
@@ -36,7 +36,7 @@ const AddBook = () => {
     setLoading(true);
 
     try {
-      const response = await axios.post('/api/books', {
+      const response = await api.post('/api/books', {
         ...formData,
         publishedYear: parseInt(formData.publishedYear)
       });

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import api from '../config/api';
 import { useAuth } from '../context/AuthContext';
 import ReviewForm from '../components/ReviewForm';
 import ReviewList from '../components/ReviewList';
@@ -21,7 +21,7 @@ const BookDetails = () => {
   // Fetch book details
   const fetchBookDetails = useCallback(async () => {
     try {
-      const response = await axios.get(`/api/books/${id}`);
+      const response = await api.get(`/api/books/${id}`);
       setBook(response.data);
     } catch (error) {
       toast.error('Failed to fetch book details');
@@ -32,7 +32,7 @@ const BookDetails = () => {
   // Fetch reviews for the book
   const fetchReviews = useCallback(async () => {
     try {
-      const response = await axios.get(`/api/reviews/book/${id}`);
+      const response = await api.get(`/api/reviews/book/${id}`);
       setReviews(response.data.reviews || response.data);
     } catch (error) {
       console.error('Error fetching reviews:', error);
@@ -51,7 +51,7 @@ const BookDetails = () => {
   const handleDeleteBook = async () => {
     if (window.confirm('Are you sure you want to delete this book? This action cannot be undone.')) {
       try {
-        await axios.delete(`/api/books/${id}`);
+        await api.delete(`/api/books/${id}`);
         toast.success('Book deleted successfully');
         navigate('/');
       } catch (error) {

@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import api from '../config/api';
 import { useAuth } from '../context/AuthContext';
 import { FaUser, FaBook, FaEdit } from 'react-icons/fa';
 
@@ -20,8 +20,8 @@ const Profile = () => {
     
     try {
       const [booksResponse, reviewsResponse] = await Promise.all([
-        axios.get(`/api/books?search=&genre=&sortBy=createdAt&sortOrder=desc&limit=100`),
-        axios.get(`/api/reviews/user/${user.id}`)
+        api.get(`/api/books?search=&genre=&sortBy=createdAt&sortOrder=desc&limit=100`),
+        api.get(`/api/reviews/user/${user.id}`)
       ]);
 
       // Filter books added by current user

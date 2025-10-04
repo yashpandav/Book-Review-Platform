@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
-import axios from 'axios';
+import api from '../config/api';
 import { useAuth } from '../context/AuthContext';
 
 const EditBook = () => {
@@ -30,7 +30,7 @@ const EditBook = () => {
   // Fetch book data
   const fetchBook = useCallback(async () => {
     try {
-      const response = await axios.get(`/api/books/${id}`);
+      const response = await api.get(`/api/books/${id}`);
       const book = response.data;
 
       // Check if user owns this book
@@ -74,7 +74,7 @@ const EditBook = () => {
     setLoading(true);
 
     try {
-      await axios.put(`/api/books/${id}`, {
+      await api.put(`/api/books/${id}`, {
         ...formData,
         publishedYear: parseInt(formData.publishedYear)
       });
