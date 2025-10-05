@@ -116,6 +116,13 @@ The application features a clean, light-only theme with warm colors:
    JWT_SECRET=your_super_secret_jwt_key_make_it_long_and_random
    NODE_ENV=development
    ```
+
+   
+   Create a `.env` file in the `frontend` directory:
+   ```env
+   REACT_APP_API_URL=http://localhost:5000
+   REACT_APP_ENV=development
+   ```
    
    **Important**: Replace the MongoDB URI with your actual connection string from Atlas!
 
