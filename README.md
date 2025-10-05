@@ -463,7 +463,7 @@ book-review-platform/
 | Charts | ✅ Complete | Rating distribution |
 | Clean Code | ✅ Complete | Beginner-friendly structure |
 | API Documentation | ✅ Complete | Postman collection |
-| Deployment Guide | ✅ Complete | Step-by-step instructions |
+| Deployment | ✅ Complete | Live Links |
 
 ## 🤝 Contributing
 
