@@ -343,6 +343,7 @@ GET /api/reviews/user/:userId
 - ✅ **Sorting**: Multiple sort options (year, rating, date, title, author)
 - ✅ **Charts**: Rating distribution visualization using Recharts
 - ✅ **Enhanced UI**: Clean, beginner-friendly design with Poppins font
+- ✅ **Mobile View**: Available to multiple view point.
 - ✅ **API Documentation**: Complete Postman collection included
 - ✅ Deployment: Backend deployed on Render, Frontend deployed on Vercel with live URLs:
    - **Frontend** - [Click Here](https://book-review-platform-sigma.vercel.app/)
@@ -460,6 +461,7 @@ book-review-platform/
 | Database Schema | ✅ Complete | User/Book/Review relations |
 | Pagination | ✅ Complete | 5 books per page |
 | Search & Filter | ✅ Complete | Multi-field search |
+| Mobile VIew | ✅ Complete | Support multiple view points |
 | Charts | ✅ Complete | Rating distribution |
 | Clean Code | ✅ Complete | Beginner-friendly structure |
 | API Documentation | ✅ Complete | Postman collection |
